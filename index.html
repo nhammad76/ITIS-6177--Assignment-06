@@ -62,7 +62,7 @@
               if (response && response.data) {
                   list.innerHTML = '';
                   response.data.forEach(post => {
-                      list.innerHTML += '<br>' + post.title + ' - ' + post.author;
+                      list.innerHTML += '<br>' + post.title + ' :: ' + post.author;
                       getPosts();
  
                   })
