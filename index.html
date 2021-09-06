@@ -42,8 +42,7 @@
                 title,
                 author
             };
-
-          axios.post('http://localhost:3004/posts', req)
+        axios.post('http://localhost:3004/posts', req)
           .then(function (response) {
               console.log(response);
               document.getElementById('title').value = '';
@@ -64,17 +63,14 @@
                   list.innerHTML = '';
                   response.data.forEach(post => {
                       list.innerHTML += '<br>' + post.title + ' - ' + post.author;
+                      getPosts();
+ 
+                  })
 
-                  });
-
-                }
-              })
               .catch(function (error) {
                   console.log(error);
               });   
-      }  
-      getPosts();
-
+            }
 
     </script>
 </body>
